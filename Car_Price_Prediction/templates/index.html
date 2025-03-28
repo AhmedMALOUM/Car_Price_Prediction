@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction du prix d'une voiture</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { display: inline-block; text-align: left; padding: 20px; border: 1px solid #ccc; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { background: #28a745; color: white; padding: 10px; border: none; width: 100%; cursor: pointer; }
+        button:hover { background: #218838; }
+        .result { margin-top: 20px; font-size: 1.2em; color: #333; }
+    </style>
+</head>
+<body>
+
+    <h1>Prédiction du prix d'une voiture</h1>
+    <form method="POST" action="/predict">
+        <label for="car_age">Âge du véhicule :</label>
+        <input type="number" name="car_age" required>
+
+        <label for="mileage">Kilométrage :</label>
+        <input type="number" name="mileage" required>
+
+        <label for="brand">Marque :</label>
+        <select name="brand">
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+        </select>
+
+        <button type="submit">Prédire</button>
+    </form>
+
+    {% if prediction %}
+        <p class="result">Prix prédit : <strong>{{ prediction }} €</strong></p>
+    {% elif error %}
+        <p class="result" style="color:red;">Erreur : {{ error }}</p>
+    {% endif %}
+
+</body>
+</html>
