@@ -51,6 +51,7 @@ Car_Price_Prediction/
 - Pandas
 - Scikit-learn
 - Joblib
+- Docker
 - MongoDB *(optionnel)*
 
 ### 2️⃣ Installation
