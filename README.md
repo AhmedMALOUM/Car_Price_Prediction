@@ -1,4 +1,4 @@
-# 📌 Description du Projet
+#  Description du Projet
 Ce projet vise à prédire le prix des voitures d'occasion en fonction de plusieurs caractéristiques comme :
 
 - L'âge du véhicule (en années)
@@ -11,7 +11,7 @@ L'objectif est de fournir une estimation rapide et précise du prix d'une voitur
 
 ---
 
-## 📂 Structure du Répertoire
+##  Structure du Répertoire
 ```
 Car_Price_Prediction/
 │── templates/                 # Dossier contenant les fichiers HTML pour l'interface utilisateur
@@ -26,7 +26,7 @@ Car_Price_Prediction/
 
 ---
 
-## 🧠 Détails du Modèle de Machine Learning
+##  Détails du Modèle de Machine Learning
 
 - **Modèle utilisé** : `RandomForestRegressor`
 - **Librairie** : `scikit-learn`
@@ -43,9 +43,9 @@ Car_Price_Prediction/
 
 ---
 
-## 🚀 Installation et Exécution
+##  Installation et Exécution
 
-### 1️⃣ Prérequis
+### 1️ Prérequis
 - Python 3.x
 - Flask
 - Pandas
@@ -54,20 +54,20 @@ Car_Price_Prediction/
 - Docker
 - MongoDB *(optionnel)*
 
-### 2️⃣ Installation
+### 2️ Installation
 ```bash
 git clone https://github.com/ton-repo/Car_Price_Prediction.git
 cd Car_Price_Prediction
 pip install -r requirements.txt  # (Créer un fichier si besoin)
 ```
 
-### 3️⃣ Exécution de l'API Flask
+### 3️ Exécution de l'API Flask
 ```bash
 python API_Flask.py
 ```
 L'API sera accessible sur `http://127.0.0.1:5000/`.
 
-### 4️⃣ Exécution avec Docker
+### 4️ Exécution avec Docker
 ```bash
 docker-compose up
 ```
@@ -76,11 +76,11 @@ docker-compose up
 
 ## 🛠 Problèmes Connus et Solutions
 
-✅ **Erreur de mismatch de colonnes**
+ **Erreur de mismatch de colonnes**
 - Vérifier que les features utilisées pour la prédiction correspondent à celles du modèle (`model_columns.pkl`).
 - Utiliser `model.feature_names_in_` pour voir les noms des colonnes attendues.
 
-✅ **Erreur "Feature names unseen at fit time"**
+ **Erreur "Feature names unseen at fit time"**
 - Charger dynamiquement `model_columns.pkl` et s’assurer que le DataFrame de prédiction a les bonnes colonnes.
 
 ---
@@ -92,7 +92,7 @@ docker-compose up
 
 ---
 
-## 📜 Licence
+##  Licence
 Ce projet est sous la licence **MIT**.
 
 🔹 **Auteur** : Ahmed MALOUM  
